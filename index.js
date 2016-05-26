@@ -2,7 +2,7 @@ var f = document.querySelectorAll('tr.js-navigation-item');
 
 f.forEach(function (tr) {
   var icon = tr.children[0];
-  var fn = tr.children[1].children[0].children[0].textContent;
+  var fn = tr.children[1].children[0].textContent;
 
   if (fn.toLowerCase() === 'license') {
     icon.innerHTML = '<i class="fa fa-certificate"></i>';
