@@ -1,0 +1,11 @@
+{
+  "name": "github-file-icon",
+  "version": "0.1.0",
+  "description": "get a better idea about files on github",
+  "main": "index.js",
+  "author": "chad luo",
+  "license": "ISC",
+  "dependencies": {
+    "devicons": "^1.8.0"
+  }
+}
