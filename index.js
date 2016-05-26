@@ -32,5 +32,9 @@ f.forEach(function (tr) {
     icon.innerHTML = '<i class="icon-script-alt"></i>';
   } else if (fn.endsWith('.yml') || fn.endsWith('.yaml') || fn.endsWith('.json')) {
     icon.innerHTML = '<i class="devicons devicons-database"></i>';
+  } else if (fn.endsWith('.swift')) {
+    icon.innerHTML = '<i class="devicons devicons-swift"></i>';
+  } else if (fn.endsWith('.plist')) {
+    icon.innerHTML = '<i class="devicons devicons-apple"></i>';
   }
 })
