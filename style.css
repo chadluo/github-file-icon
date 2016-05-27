@@ -38,3 +38,5 @@ table.files td.icon {
 .devicons-python:before { content: "\e63c" }
 .devicons-ruby_rough:before { content: "\e691" }
 .devicons-sass:before { content: "\e64b" }
+.devicons-swift:before { content:"\e655" }
+.devicons-apple:before { content:"\e611" }
