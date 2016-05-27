@@ -14,5 +14,8 @@
     "css": ["style.css"],
     "js": ["index.js"]
   }],
-  "web_accessible_resources": ["node_modules/devicons/fonts/*.*"]
+  "web_accessible_resources": [
+    "node_modules/devicons/fonts/*.*",
+    "node_modules/font-awesome/fonts/*.*"
+  ]
 }

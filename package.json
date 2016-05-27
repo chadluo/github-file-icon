@@ -6,6 +6,7 @@
   "author": "chad luo",
   "license": "ISC",
   "dependencies": {
-    "devicons": "^1.8.0"
+    "devicons": "^1.8.0",
+    "font-awesome": "^4.6.3"
   }
 }

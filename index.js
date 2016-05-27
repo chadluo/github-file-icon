@@ -1,5 +1,31 @@
 ;
 (function () {
+  function wrap(classes) {
+    return '<i class="extfont ' + classes + '"></i>';
+  }
+
+  function wrapDevicons(ext) {
+    return wrap('devicons devicons-' + ext);
+  }
+
+  var icons = {
+    'js': wrapDevicons('javascript'),
+    'css': wrapDevicons('css3_full'),
+    'scss': wrapDevicons('sass'),
+    'less': wrapDevicons('less'),
+    'html': wrapDevicons('html5'),
+    'md': wrapDevicons('markdown'),
+    'hs': wrapDevicons('haskell'),
+    'py': wrapDevicons('python'),
+    'php': wrapDevicons('php'),
+    'rb': wrapDevicons('ruby_rough'),
+    'yml': wrapDevicons('database'),
+    'yaml': wrapDevicons('database'),
+    'json': wrapDevicons('database'),
+    'swift': wrapDevicons('swift'),
+    'plist': wrapDevicons('apple')
+  };
+
   var f = document.querySelectorAll('tr.js-navigation-item');
 
   [].slice.call(f).forEach(function (tr) {
@@ -11,37 +37,16 @@
     var fn = content.innerText.trim();
 
     if (fn.toLowerCase() === 'license') {
-      icon.innerHTML = '<i class="fa fa-certificate"></i>';
+      icon.innerHTML = '<i class="extfont fa fa-certificate"></i>';
     } else if (fn.startsWith('.git')) {
-      icon.innerHTML = '<i class="devicons devicons-git"></i>';
-    } else if (fn.endsWith('.js')) {
-      icon.innerHTML = '<i class="devicons devicons-javascript_badge"></i>';
-    } else if (fn.endsWith('.css')) {
-      icon.innerHTML = '<i class="devicons devicons-css3_full"></i>';
-    } else if (fn.endsWith('.scss')) {
-      icon.innerHTML = '<i class="devicons devicons-sass"></i>';
-    } else if (fn.endsWith('.less')) {
-      icon.innerHTML = '<i class="devicons devicons-less"></i>';
-    } else if (fn.endsWith('.html')) {
-      icon.innerHTML = '<i class="devicons devicons-html5"></i>';
-    } else if (fn.endsWith('.md')) {
-      icon.innerHTML = '<i class="devicons devicons-markdown"></i>';
-    } else if (fn.endsWith('.hs')) {
-      icon.innerHTML = '<i class="devicons devicons-haskell"></i>';
-    } else if (fn.endsWith('.py')) {
-      icon.innerHTML = '<i class="devicons devicons-python"></i>';
-    } else if (fn.endsWith('.php')) {
-      icon.innerHTML = '<i class="devicons devicons-php"></i>';
-    } else if (fn.endsWith('.rb')) {
-      icon.innerHTML = '<i class="devicons devicons-ruby_rough"></i>';
+      icon.innerHTML = wrapDevicons('git');
+    } else if (fn.startsWith('.npm')) {
+      icon.innerHTML = wrapDevicons('npm');
     } else if (fn.endsWith('.sh')) {
       icon.innerHTML = '<i class="icon-script-alt"></i>';
-    } else if (fn.endsWith('.yml') || fn.endsWith('.yaml') || fn.endsWith('.json')) {
-      icon.innerHTML = '<i class="devicons devicons-database"></i>';
-    } else if (fn.endsWith('.swift')) {
-      icon.innerHTML = '<i class="devicons devicons-swift"></i>';
-    } else if (fn.endsWith('.plist')) {
-      icon.innerHTML = '<i class="devicons devicons-apple"></i>';
+    } else if (fn.includes('.')) {
+      icon.innerHTML = icons[fn.split('.').slice(-1)[0]] || icon.innerHTML;
     }
+
   });
 })();
