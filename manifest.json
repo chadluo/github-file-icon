@@ -20,8 +20,6 @@
   }],
   "web_accessible_resources": [
     "node_modules/devicons/fonts/*.*",
-    "node_modules/devicons/css/*.css",
-    "node_modules/font-awesome/fonts/*.*",
-    "node_modules/font-awesome/css/*.css"
+    "node_modules/font-awesome/fonts/*.*"
   ]
 }
