@@ -1,4 +1,4 @@
-# GitHub File icon
+# GitHub File Icon
 
 ![Preview](http://i.imgur.com/R8EBxlt.png)
 
