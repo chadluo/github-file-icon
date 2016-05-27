@@ -11,11 +11,17 @@
   ],
   "content_scripts": [{
     "matches": ["https://github.com/*"],
-    "css": ["style.css"],
+    "css": [
+      "node_modules/devicons/css/devicons.min.css",
+      "node_modules/font-awesome/css/font-awesome.min.css",
+      "style.css"
+    ],
     "js": ["index.js"]
   }],
   "web_accessible_resources": [
     "node_modules/devicons/fonts/*.*",
-    "node_modules/font-awesome/fonts/*.*"
+    "node_modules/devicons/css/*.css",
+    "node_modules/font-awesome/fonts/*.*",
+    "node_modules/font-awesome/css/*.css"
   ]
 }

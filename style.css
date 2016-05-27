@@ -1,22 +1,20 @@
 table.files td.icon {
   padding-top: 0;
   padding-bottom: 0;
+  text-align: center;
 }
 
 .extfont {
   display: inline-block;
   font-size: 18px;
-  line-height: 13px;
-  transform: translate(-2px, 3px);
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  vertical-align: baseline;
+  width: 14px;
 }
 
 /*!
@@ -33,27 +31,8 @@ table.files td.icon {
 
 .devicons {
   font-family: devicons;
-  /*font-size: 16px;
-  margin-left: -2px;
-  margin-top: 2px;
-  margin-bottom: -2px;*/
+  transform: translate(-2px, 2px);
 }
-
-.devicons-css3_full:before { content: "\e64a" }
-.devicons-database:before { content: "\e606" }
-.devicons-git:before { content: "\e602" }
-.devicons-haskell:before { content: "\e677" }
-.devicons-html5:before { content: "\e636" }
-.devicons-javascript:before { content: "\e64e" }
-.devicons-less:before { content: "\e658" }
-.devicons-markdown:before { content: "\e63e" }
-.devicons-php:before { content: "\e63d" }
-.devicons-python:before { content: "\e63c" }
-.devicons-ruby_rough:before { content: "\e691" }
-.devicons-sass:before { content: "\e64b" }
-.devicons-swift:before { content:"\e655" }
-.devicons-apple:before { content:"\e611" }
-.devicons-npm:before { content: "\e61e" }
 
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -70,6 +49,5 @@ table.files td.icon {
 
 .fa {
   font-family: FontAwesome;
+  transform: translate(-1px, 2px);
 }
-
-.fa-certificate:before { content: "\f0a3"; }
