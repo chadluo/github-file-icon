@@ -1,12 +1,12 @@
 table.files td.icon {
   padding-top: 0;
   padding-bottom: 0;
+  padding-right: 5px !important;
   text-align: center;
 }
 
 .extfont {
   display: inline-block;
-  font-size: 18px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -31,6 +31,7 @@ table.files td.icon {
 
 .devicons {
   font-family: devicons;
+  font-size: 18px;
   transform: translate(-2px, 2px);
 }
 
@@ -49,5 +50,6 @@ table.files td.icon {
 
 .fa {
   font-family: FontAwesome;
-  transform: translate(-1px, 2px);
+  font-size: 16px;
+  transform: translateY(2px);
 }

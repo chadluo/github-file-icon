@@ -13,28 +13,30 @@
   }
 
   var icons = {
-    'js': wrapDevicons('javascript'),
+    'bat': wrapDevicons('terminal_badge'),
+    'clj': wrapDevicons('clojure'),
     'css': wrapDevicons('css3_full'),
-    'scss': wrapDevicons('sass'),
-    'less': wrapDevicons('less'),
-    'html': wrapDevicons('html5'),
-    'md': wrapDevicons('markdown'),
+    'exe': wrapDevicons('windows'),
     'hs': wrapDevicons('haskell'),
-    'py': wrapDevicons('python'),
-    'php': wrapDevicons('php'),
-    'rb': wrapDevicons('ruby_rough'),
-    'yml': wrapDevicons('database'),
-    'yaml': wrapDevicons('database'),
+    'html': wrapDevicons('html5'),
+    'js': wrapDevicons('javascript'),
     'json': wrapDevicons('database'),
-    'swift': wrapDevicons('swift'),
+    'less': wrapDevicons('less'),
+    'markdown': wrapDevicons('markdown'),
+    'md': wrapDevicons('markdown'),
+    'mdown': wrapDevicons('markdown'),
+    'php': wrapDevicons('php'),
     'plist': wrapDevicons('apple'),
+    'py': wrapDevicons('python'),
+    'rb': wrapDevicons('ruby_rough'),
+    'scss': wrapDevicons('sass'),
     'sh': wrapDevicons('terminal'),
-    'exe': wrapDevicons('windows')
+    'swift': wrapDevicons('swift'),
+    'yaml': wrapDevicons('database'),
+    'yml': wrapDevicons('database')
   };
 
-  var f = document.querySelectorAll('tr.js-navigation-item');
-
-  [].slice.call(f).forEach(function (tr) {
+  [].slice.call(document.querySelectorAll('tr.js-navigation-item')).forEach(function (tr) {
     var icon = tr.querySelector('.icon');
     var content = tr.querySelector('.content a');
     if (!content) {
@@ -44,10 +46,24 @@
 
     if (fn.toLowerCase() === 'license') {
       icon.innerHTML = wrapFontAwesome('certificate');
+    } else if (fn === 'configure') {
+      icon.innerHTML = wrapFontAwesome('cog');
+    } else if (fn === 'manifest.json') {
+      icon.innerHTML = wrapDevicons('chrome');
+    } else if (fn === 'CNAME') {
+      icon.innerHTML = wrapFontAwesome('globe');
     } else if (fn.startsWith('.git')) {
       icon.innerHTML = wrapDevicons('git');
-    } else if (fn.startsWith('.npm')) {
+    } else if (fn.startsWith('.vim')) {
+      icon.innerHTML = wrapDevicons('vim');
+    } else if (fn.startsWith('.npm') || fn.toLowerCase() === 'package.json') {
       icon.innerHTML = wrapDevicons('npm');
+    } else if (fn.startsWith('.travis')) {
+      icon.innerHTML = wrapDevicons('travis');
+    } else if (fn.startsWith('.docker') || fn === 'Dockerfile') {
+      icon.innerHTML = wrapDevicons('docker');
+    } else if (fn === 'gulpfile.js') {
+      icon.innerHTML = wrapDevicons('gulp');
     } else if (fn.includes('.')) {
       icon.innerHTML = icons[fn.split('.').slice(-1)[0]] || icon.innerHTML;
     }
