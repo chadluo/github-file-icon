@@ -16,6 +16,7 @@ table.files td.icon {
 
 .devicons {
   font-family: devicons;
+  margin-left: -3px;
   speak: none;
   font-style: normal;
   font-weight: 400;
